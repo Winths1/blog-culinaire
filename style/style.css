@@ -1,0 +1,16 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main.main_color {
+    background-color: wheat;
+}
+div.com_color {
+    background-color: white;
+}
+div.size_com {
+    height: 100%;
+}
