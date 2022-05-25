@@ -1,13 +1,12 @@
 <?php
 
-class BaseDeDonnee{
-    private function getBdd($servname,$dbname,$user,$pass) {
+    function getBdd($servname,$dbname,$user,$pass) {
         $dbco = new PDO("mysql:host=$servname;dbname=$dbname", $user, $pass);
         $dbco->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $dbco;
     }
     
-    public function getRecettes () {
+     function getRecettes () {
         $servname = 'localhost';
         $dbname = 'blog_culinaire';
         $user = 'root';
@@ -24,7 +23,7 @@ class BaseDeDonnee{
         return $sth->fetchALL(PDO::FETCH_ASSOC);
     }
 
-    public function getSingleRecette($id) {
+    function getSingleRecette($id) {
         $servname = 'localhost';
         $dbname = 'blog_culinaire';
         $user = 'root';
@@ -48,7 +47,7 @@ class BaseDeDonnee{
         $dbco = NULL;      
     }
 
-    public function getRecetteByCategory ($category) {
+    function getRecetteByCategory ($category) {
         $servname = 'localhost';
         $dbname = 'blog_culinaire';
         $user = 'root';
